@@ -43,17 +43,18 @@ body {
   background-color:#fcfcfc;
 }
 
-img{
+/*img{
   border-radius: 50%;
   width:50px;
   height:50px;
   border: 1px solid white;
   border-width:2px;
-}
+}*/
+
 .img_workitem{
   border-radius: 50%;
-  width:50px;
-  height:50px;
+  width:40px;
+  height:40px;
   border: 1px solid #b8b7ad;
   border-width:2px;
 }
@@ -73,7 +74,12 @@ img{
   text-decoration: none;
   margin-bottom: 10px;
   color: #d1d1d1;
+
   transition: color 0.2s;
+}
+.test{
+  color: #f1f1f1;
+  border: 1px solid #d1d1d1;  
 }
 
 .bm-item:hover {
@@ -82,7 +88,7 @@ img{
 }
 
 .bm-burger-button {
-  position: fixed;
+  /*position: fixed;*/
   width: 36px;
   height: 30px;
   left: 36px;
@@ -162,14 +168,43 @@ img{
 }
 .team_img{
   float: right;
+  border-radius: 50%;
+  width:40px;
+  height:40px;
+  border: 1px solid white;
+  border-width:2px;
 }
 
-.grid{
+/*Previously grid but semantic-ui class called it. Renamed to gridCustom*/
+/*TODO: update components that uses this class.*/
+.gridCustom{
   width: 950px;
   height:280px;
   margin:15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
+  /*text-align: center;*/
+  background-color:white;
+}
+
+.workItemGridCustom{
+  width: 1010px;
+  /*height:280px;*/
+  margin:15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /*text-align: center;*/
+  background-color:white;
+}
+
+.imgDropDown{
+  width:30px;
+  height:30px;
+}
+
+.sprintGrid{
+  width: 1035px;
+  margin:15px;
+  border: 1px solid #d1d1d1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color:white;
 }
 
@@ -214,13 +249,15 @@ img{
   padding-bottom:10px;
   height:30px;
   background-color:#474a59;
+  /*background-color:#d1d7f1;*/
   color: white;
 }
+
 
 .newTable{
   width: 322px;
   height:370px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -10px 20px 0 rgba(0, 0, 0, 0.19), 0 10px 20px 0 rgba(0, 0, 0, 0.19);  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19), 0 1px 5px 0 rgba(0, 0, 0, 0.19);  
   display:inline-table;
   margin-right:20px;
   margin-bottom:30px;
@@ -230,7 +267,7 @@ img{
 .inProgressTable{
   width: 322px;
   height:370px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -10px 20px 0 rgba(0, 0, 0, 0.19), 0 10px 20px 0 rgba(0, 0, 0, 0.19);  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19), 0 1px 5px 0 rgba(0, 0, 0, 0.19);  
   display:inline-table;
   margin-right:20px;
   margin-bottom:30px;
@@ -240,7 +277,7 @@ img{
 .completedTable{
   width: 322px;
   height:370px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -10px 20px 0 rgba(0, 0, 0, 0.19), 0 10px 20px 0 rgba(0, 0, 0, 0.19);  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19), 0 1px 5px 0 rgba(0, 0, 0, 0.19);  
   display:inline-table;
   margin-bottom:30px;
   background-color:white;
@@ -304,3 +341,44 @@ img{
   left:0;
   bottom:0;
 }
+
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: rgba(0,0,0,.6);
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  margin: 0 .25em 0 0;
+  padding: .78571429em 1.5em .78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 700;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: .28571429rem;
+  -webkit-box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34,36,38,.15) inset;
+  box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34,36,38,.15) inset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity .1s ease,background-color .1s ease,color .1s ease,background .1s ease,-webkit-box-shadow .1s ease;
+  transition: opacity .1s ease,background-color .1s ease,color .1s ease,background .1s ease,-webkit-box-shadow .1s ease;
+  transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease;
+  transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease,-webkit-box-shadow .1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button :after, :before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+

@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import { stack as Menu } from "react-burger-menu";
 import './App.css';
+import Sprints from './Sprints';
+import WorkItemV from './WorkItemV';
 import sp_chocolate from './spongebob_chocolate300.jpg';
 import sp_fish_on_fire from './spongebob_fish_on_fire300.jpg';
 import sp_load_of_barnacles from './spongebob_load_of_barnacles300.jpg';
 import sp_roach from './spongebob_roach300.jpg';
 import sp_smell from './spongebob_smell300.jpg';
+
+/*
+
+SideBar.js
+
+This call is to just display the sidebar for the react application.
+
+*/
+
 
 const moreSprints = [<div >SubSprint 1</div>, <div>SubSprint 2</div>, <div>SubSprint 3</div>, <div>SubSprint 4</div>, <div>SubSprint 5</div>];
 const moreWorkItems = [<div >SubWorkItem 1</div>, <div>SubWorkItem 2</div>, <div>SubWorkItem 3</div>, <div>SubWorkItem 4</div>, <div>SubWorkItem 5</div>];
@@ -49,7 +60,6 @@ class SideBar extends React.Component{
     this.setState(state => ({
       showSprints : !state.showSprints
     }));
-
   }
 
   workItemsClick(){
@@ -66,24 +76,22 @@ class SideBar extends React.Component{
 
   render(){
     return (
-      <Menu isOpen={ true } noOverlay disableOverlayClick customBurgerIcon={ false } customCrossIcon={ false } >
+      <Menu style={{display:'inline', position:'unset', zIndex: 'unset !important'}} isOpen={ true } noOverlay disableOverlayClick customBurgerIcon={ false } customCrossIcon={ false } >
         
         <div className="fontFamilies">Sprintacular</ div>
-
-
 
         <a className="fontFam" style={{paddingTop:"10px", paddingBottom:"10px"}} onClick={this.onClick}>
         Sprints
         </ a>
         <div className="fontFam" style={{paddingLeft : "30px"}}>
-          { this.state.showSprints ? moreSprints : null }
+          {/*{ this.state.showSprints ? <Sprints/> : null }*/}
         </div>
   
         <div className="fontFam" style={{paddingTop:"10px", paddingBottom:"10px"}} onClick={this.workItemsClick}>
         Work Items
         </div>
         <div className="fontFam" style={{paddingLeft : "30px"}}>
-          { this.state.showWorkItems ? moreWorkItems : null }
+          {/*{ this.state.showWorkItems ? <WorkItem/> : null }}*/}
         </div>
 
         <div className="fontFam" style={{paddingTop:"10px", paddingBottom:"10px"}} onClick={this.teamMembersClick}>

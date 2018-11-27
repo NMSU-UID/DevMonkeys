@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import { Container } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css';
+import { Button, Icon, Label, Menu, Table, Modal, Header, Image, Input, Grid, Form, TextArea, Dropdown, Sidebar, Segment } from 'semantic-ui-react';
 import './App.css';
 import sp_chocolate from './spongebob_chocolate300.jpg';
 import sp_fish_on_fire from './spongebob_fish_on_fire300.jpg';
 import sp_load_of_barnacles from './spongebob_load_of_barnacles300.jpg';
 import sp_roach from './spongebob_roach300.jpg';
 import sp_smell from './spongebob_smell300.jpg';
-import { Button } from 'react-bootstrap';
-import Button2 from 'react-bootstrap/lib/Button';
 
+/*
+
+WorkItem.js
+
+This is a child component of index.js. This should be called when user clicks on the Work Tabs. 
+
+*/
 
 class WorkItem extends React.Component{
   constructor(props) {
@@ -66,7 +72,7 @@ class WorkItem extends React.Component{
     return(
       <div style={{marginBottom:'30px', paddingTop:'15px'}}>
 
-        <div className="grid" style={{float: 'right', padding : '30px'}}>
+        <div className="workItemGridCustom" style={{float: 'right', paddingTop : '30px', paddingLeft : '30px', paddingRight : '30px'}}>
             
             <div style={{width: '370px', float:'right'}}>
               <span className="fontFam" style={{color: '#727272', paddingTop: '40px', fontWeight: '600', fontSize: '15px', display: 'inline-block'}}>IN PROGRESS</span>
@@ -80,16 +86,30 @@ class WorkItem extends React.Component{
             <p style={{clear:'both'}}/>
             <div className="fontFam" style={{float:'right', color: '#727272', fontWeight: '800', fontSize: '15px', display: 'inline-block'}}>50% COMPLETION</div>
             <p style={{clear:'both'}}>
-              <div style={{maxWidth: '950px', float:'right', display: 'block', align:"right"}}>
+              <div style={{maxWidth: '950px', float:'right', display: 'block', align:"right", marginTop:'30px'}}>
                     <h4 className="fontFam" style={{maxWidth: '950px', fontWeight: '500', textAlign: 'justify', align:'right', display: 'block'}}>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis.</h4>
               </div>
-              <div style={{float:'right', display: 'block', align:"right"}}>
+              <div style={{display: 'block'}}>
+                <span style={{float:'left', display: 'inline', width:'100%', marginTop:'30px', position:'relative'}}>
+                    
+                    <span className="fontFam" style={{bottom: '25px', position: 'relative', margin:'10px', display:'inline'}}>Assigned To: Ariel Salt</span>
+                    <img className="img_workitem" style={{display:'inline', margin:'10px'}} src={sp_fish_on_fire} alt={sp_fish_on_fire}></img>
+                    
+                    <span className="fontFam" style={{bottom: '25px', position: 'relative', margin:'10px', display:'inline'}}>Last Modified By: Ariel Salt</span>
+                    <img className="img_workitem" style={{display:'inline',  margin:'10px'}} src={sp_fish_on_fire} alt={sp_fish_on_fire}></img>
+                    
+                    <span className="fontFam" style={{bottom: '25px', display:'inline', position: 'relative', margin:'10px'}}>Last Modified: 11/11/2018</span>
+                    
+                    
 
-                  <span className="fontFam" style={{top: '15px', display:'inline', position: 'relative', marginRight:'30px'}}>Last Modified: 11/11/2018</span>
-                  <span className="fontFam" style={{top: '15px', position: 'relative', marginRight:'15px', display:'inline'}}>Assigned To: Ariel Salt</span>
-                  <img className="team_img img_workitem" style={{display:'inline'}} src={sp_fish_on_fire} alt={sp_fish_on_fire}></img>
-
-                  
+                    <Button onClick={this.listViewButtonOnClick} icon style={{float:'right', position: 'absolute',right: '45px',bottom: '0',marginBottom: '15px'}}>
+                        <Icon name='list' />
+                    </Button>
+                    <Button onClick={this.dragAndDropButtonOnClick} icon style={{float:'right', position: 'absolute',right: '0',bottom: '0',marginBottom: '15px'}}>
+                        <Icon name='th' />
+                    </Button>
+                    <Button style={{float:'right', position: 'absolute',right: '90px',bottom: '0',marginBottom: '15px'}}>NEW</Button>
+                </span>
               </div>
             </p>
         </div>
