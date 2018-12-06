@@ -1,0 +1,97 @@
+.newflag{
+  bottom: 10px;
+  position: relative;
+  padding-top:10px;
+  padding-left:123px;
+  padding-right:123px;
+  padding-bottom:10px;
+  height:30px;
+  background-color:#474a59;
+  color: white;
+}
+
+.inProgressflag{
+  bottom: 10px;
+  position: relative;
+  padding-top:10px;
+  padding-left:90px;
+  padding-right:90px;
+  padding-bottom:10px;
+  height:30px;
+  background-color:#474a59;
+  color: white;
+}
+
+.completedflag{
+  bottom: 10px;
+  position: relative;
+  padding-top:10px;
+  padding-left:95px;
+  padding-right:95px;
+  padding-bottom:10px;
+  height:30px;
+  background-color:#474a59;
+  /*background-color:#d1d7f1;*/
+  color: white;
+}
+
+
+.newTable{
+  width: 322px;
+  height:370px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19), 0 1px 5px 0 rgba(0, 0, 0, 0.19);  
+  display:inline-table;
+  margin-right:20px;
+  margin-bottom:30px;
+  background-color:white;
+}
+
+.inProgressTable{
+  width: 322px;
+  height:370px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19), 0 1px 5px 0 rgba(0, 0, 0, 0.19);  
+  display:inline-table;
+  margin-right:20px;
+  margin-bottom:30px;
+  background-color:white;
+}
+
+.completedTable{
+  width: 322px;
+  height:370px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 -1px 5px 0 rgba(0, 0, 0, 0.19), 0 1px 5px 0 rgba(0, 0, 0, 0.19);  
+  display:inline-table;
+  margin-bottom:30px;
+  background-color:white;
+}
+
+.taskItemHeader{
+  margin-left:10px;
+  margin-right:10px;
+  /*background-color: #7c819e;
+  color: white;*/
+  font-weight: 500;
+  padding:5px;
+  border: 1px solid #969595;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.taskItemBody{
+  border-left: 1px solid #969595; 
+  border-right: 1px solid #969595; 
+  border-bottom: 1px solid #969595; 
+  margin-left:10px;
+  margin-right:10px;
+  height:100px;
+  padding:5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.trHeight{
+  height: 0 !important;
+  /*height: auto;*/
+  position: relative;
+  overflow: hidden;
+}

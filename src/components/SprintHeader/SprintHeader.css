@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+.FontFam{
+/*  font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Muli', sans-serif;
+
+}
+
+.sprintH{
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #d1d1d1;
+    width: 100%;
+    padding: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
