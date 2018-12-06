@@ -12,6 +12,36 @@ class SprintField extends Component{
         showListView: false,
         showDragnDropView :false,
         showNewWorkItem: false,
+        sprints:[
+                {
+                   sprintID: 1234,
+                   sprintTitle:'Work Item Title',
+                   sprintDescription:'Work Item description',
+                   sprintStatus: 'New',
+                   sprintLastMod:'11-23-2018'
+                },
+                {
+                   sprintID: 1234,
+                   sprintTitle:'Work Item Title',
+                   sprintDescription:'Work Item description',
+                   sprintStatus: 'New',
+                   sprintLastMod:'11-24-2018'
+                },
+                {
+                   sprintID: 1234,
+                   sprintTitle:'Work Item Title',
+                   sprintDescription:'Work Item description',
+                   sprintStatus: 'In-Progress',
+                   sprintLastMod:'11-25-2018'
+                },
+                {
+                   sprintID: 1234,
+                   sprintTitle:'Work Item Title',
+                   sprintDescription:'Work Item description',
+                   sprintStatus: 'Complete',
+                   sprintLastMod:'11-26-2018'
+                },
+            ]
     }
     
     listClickHandler = () =>{
@@ -38,7 +68,7 @@ class SprintField extends Component{
             <div style={{marginBottom:'30px', paddingTop:'15px', display:'inline'}}>
                 <div className="sprintGrid" style={{float: 'right'}}>
                     <SprintHeader listclick={this.listClickHandler} thclick={this.thClickHandler} wiclick={this.wiClickHandler} />
-                    {this.state.showListView ? <ListView/> :null}
+                    {this.state.showListView ? <ListView sprints={this.state.sprints}/> :null}
                     {this.state.showDragnDropView ? <DragDropView/> :null}
                     
                 </div>
